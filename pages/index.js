@@ -52,11 +52,9 @@ export default function Index() {
                             worldwide
                         </h1>
                         <p className="leading-6 text-gray-a">
-                            Lorem ipsum dolor sit amet, consectetur
-                            adipiscing elit. Amet, felis mi lectus
-                            non sed. Venenatis ut amet auctor
-                            ultricies eget tincidunt ultricies
-                            scelerisque.
+                            Cultural Routes app provide you fresh
+                            dose of culture interconnected with the
+                            previous ones
                         </p>
                     </div>
                     <div className="pl-4 mt-4 mb-2 text-xs font-medium tracking-wider text-white uppercase text-opacity-60">

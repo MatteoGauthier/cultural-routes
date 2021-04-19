@@ -104,6 +104,8 @@ function GlobeViz() {
 
         // world.controls().enabled = false;
         // world.controls().autoRotate = true;
+        world.controls().enableZoom = false;
+        world.controls().enablePan = false;
         world.controls().autoRotateSpeed = 1.1;
         world.camera().zoom = 1.4;
         world

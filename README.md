@@ -5,3 +5,4 @@
 - [ ] summary for each of topics
 - [ ] Banner images
 - [ ] faces cloud
+- [ ] SEO
