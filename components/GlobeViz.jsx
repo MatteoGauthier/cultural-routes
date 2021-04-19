@@ -55,8 +55,8 @@ function GlobeViz() {
     useEffect(() => {
         const globeDOM = document.querySelector('.globe-el');
         const world = Globe()
-            .globeImageUrl('/images/earth-blue-marble.jpg')
-            .bumpImageUrl('/images/earth-topology.png')
+            .globeImageUrl('https://unpkg.com/three-globe@2.18.0/example/img/earth-blue-marble.jpg')
+            .bumpImageUrl('https://unpkg.com/three-globe@2.18.0/example/img/earth-topology.png')
             .arcsData(arcsData)
             .arcStroke(1)
             .width(globeWidth)
@@ -70,7 +70,7 @@ function GlobeViz() {
         const globeMaterial = world.globeMaterial();
         globeMaterial.bumpScale = 10;
         new THREE.TextureLoader().load(
-            '/images/earth-water.png',
+            'https://unpkg.com/three-globe@2.18.0/example/img/earth-water.png',
             texture => {
                 globeMaterial.specularMap = texture;
                 globeMaterial.specular = new THREE.Color('grey');

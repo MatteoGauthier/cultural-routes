@@ -6,3 +6,4 @@
 - [ ] Banner images
 - [ ] faces cloud
 - [ ] SEO
+- [ ] fix light position
