@@ -15,7 +15,7 @@ export default function route({ children, frontMatter }) {
                     <span>back to the home</span>
                 </a>
             </Link>
-            <div className="pt-20 mx-auto routes-container">
+            <div className="py-20 mx-auto routes-container">
                 <div className="mx-auto border-2 border-white max-w-7xl rounded-2xl bg-sky-2 border-opacity-20 backdrop-filter bg-blend-overlay backdrop-blur-xl bg-opacity-20">
                     <article className="max-w-5xl pt-10 pb-16 mx-auto prose prose-blue">
                         <div>{children}</div>

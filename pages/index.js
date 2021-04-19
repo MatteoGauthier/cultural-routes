@@ -46,7 +46,7 @@ export default function Index() {
                     <GlobeViz />
                 </div>
                 <div className="w-full max-w-xl ml-4 content-container">
-                    <div className="flex flex-col mt-12 mb-8 space-y-2 ">
+                    <div className="flex flex-col mt-12 mb-8 space-y-2 3xl:mt-28 ">
                         <h1 className="w-3/4 text-2xl font-bold leading-6 text-transparent bg-clip-text bg-gradient-to-br from-white to-gray-400">
                             Discover hand-picked cultural routes
                             worldwide
@@ -73,13 +73,11 @@ export default function Index() {
                                 },
                                 idx
                             ) => (
-                                <Link href={
-                                  '/routes/' + slug
-                              } key={idx}>
-                                    <a
-                                        className="w-full h-full px-4 py-3 text-white cursor-pointer gradient-box "
-                                        
-                                    >
+                                <Link
+                                    href={'/routes/' + slug}
+                                    key={idx}
+                                >
+                                    <a className="w-full h-full px-4 py-3 text-white cursor-pointer gradient-box ">
                                         <div className="text-lg">
                                             {title}
                                         </div>
@@ -91,15 +89,9 @@ export default function Index() {
                                                 Reading time :{' '}
                                                 {readingTime}
                                             </span>
-                                            <Link
-                                                href={
-                                                    '/routes/' + slug
-                                                }
-                                            >
-                                                <a className="text-glow-gray">
-                                                    Read this route
-                                                </a>
-                                            </Link>
+                                            <button className="text-glow-gray">
+                                                Read this route
+                                            </button>
                                         </div>
                                     </a>
                                 </Link>

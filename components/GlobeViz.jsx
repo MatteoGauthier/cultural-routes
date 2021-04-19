@@ -42,7 +42,12 @@ const arcsData = [
     }
 ];
 
+function useForceUpdate() {
+    return React.useReducer(() => ({}), {})[1]; // <- paste here
+}
 function GlobeViz() {
+    
+
     const isWide = useMedia('(min-width: 1600px');
 
     const globeWidth = isWide ? 1000 : 800;
@@ -106,6 +111,7 @@ function GlobeViz() {
             .addEventListener('change', updateLight, false);
         updateLight();
     }, []);
+
 
     return <div className="globe-el"></div>;
 }
