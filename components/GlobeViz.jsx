@@ -1,14 +1,42 @@
 import React, { useState, useRef, useEffect } from 'react';
 
 import * as THREE from 'three';
-import { useKey } from 'react-use';
 import Globe from 'globe.gl';
 const arcsData = [
   {
-    startLat: '-18.514171',
-    startLng: '-39.916707',
-    endLat: '34.490140',
-    endLng: '-81.459081',
+    startLat: '6.814894213835802',
+    startLng: '-10.705630223616884',
+    endLat: '30.0329222',
+    endLng: '-90.0226499',
+    color: ['#fff', '#2dd5ff']
+  },
+  {
+    startLat: '19.262780695424368',
+    startLng: '7.581262260433491',
+    endLat: '46.64406461540095',
+    endLng: '2.6049684464399627',
+    color: ['#fff', '#2dd5ff']
+  },
+  {
+    startLat: '35.70040607259982',
+    startLng: '139.76703432517624',
+    endLat: '34.05006796590357',
+    endLng: '-118.23703385026508',
+    color: ['#fff', '#2dd5ff']
+  },
+  {
+    startLat: '51.51180235509687',
+    startLng: '-0.12916360912427974',
+    endLat: '40.66131680386413',
+    endLng: '-73.94550224918119',
+    color: ['#fff', '#2dd5ff']
+  },
+  {
+    startLat: '51.51180235509687',
+
+    startLng: '55.775230337240174',
+    endLat: '39.92676614571774',
+    endLng: '116.33148284879371',
     color: ['#fff', '#2dd5ff']
   }
 ];
@@ -24,6 +52,7 @@ function GlobeViz() {
       .width(800)
       .arcAltitude(0.2)
       .backgroundColor('rgba(0,0,0,0)')
+      .atmosphereColor('rgb(95, 95, 95)')
       .arcColor('color')(globeDOM);
 
     window.addEventListener('resize', onWindowResize);
@@ -52,15 +81,14 @@ function GlobeViz() {
       updateLight();
       world.camera().aspect = window.innerWidth / window.innerHeight;
       world.camera().updateProjectionMatrix();
-      world.camera().updateProjectionMatrix();
       world
         .renderer()
         .setSize(window.innerWidth, window.innerHeight);
-    //   world.controls().handleResize();
+      //   world.controls().handleResize();
     };
 
-    // world.controls().enabled = true;
-    world.controls().autoRotate = true;
+    // world.controls().enabled = false;
+    // world.controls().autoRotate = true;
     world.controls().autoRotateSpeed = 1.1;
     world.camera().zoom = 1.4;
     world.controls().addEventListener('change', updateLight, false);
@@ -70,19 +98,6 @@ function GlobeViz() {
   return (
     <div className="globe-elm">
       <div className="globe-el"></div>
-      {/* <Globe
-				ref={globeEl}
-				arcsData={arcsData}
-				arcStroke={1}
-				globeMaterial={globeMaterial}
-				width={800}
-				onGlobeReady={() => initGlobe()}
-				arcAltitude={0.2}
-				backgroundColor="rgba(0,0,0,0)"
-				arcColor={"color"}
-				globeImageUrl="/images/earth-blue-marble.jpg"
-				bumpImageUrl="/images/earth-topology.png"
-			/> */}
     </div>
   );
 }

@@ -1,8 +1,59 @@
 .strict-container {
-	height: 100vh;
-	width: 100%;
-	/* background-image: url("/images/night-sky.png"); */
-	background-position-y: center;
-	display: flex;
-	justify-content: flex-end;
+  height: 100vh;
+  width: 100%;
+  background-image: url('/images/night-sky.png');
+  background-position-y: center;
+  display: flex;
+}
+
+.globe-elm {
+  max-width: 800px;
+  width: 100%;
+}
+.gradient-box {
+  position: relative;
+  background: linear-gradient(
+    92.24deg,
+    rgba(58, 129, 191, 0.08) 0%,
+    rgba(108, 69, 139, 0.04) 100%
+  );
+  backdrop-filter: blur(4px);
+  border-radius: 16px;
+}
+.gradient-box::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 16px;
+  padding: 1.5px;
+  background: linear-gradient(
+      165deg,
+      #ef36ff 0%,
+      rgba(81, 131, 212, 0) 39.32%
+    ),
+    linear-gradient(
+      165deg,
+      rgba(81, 131, 212, 0) 64.05%,
+      #36f3ff 100%
+    );
+  -webkit-mask: linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+  filter: brightness(8.5);
+  transition: all 250ms ease-out;
+}
+
+.gradient-box:hover::before {
+	filter: brightness(1);
+}
+
+.text-glow-gray {
+  text-shadow: 0px 1px 14px rgba(255, 255, 255, 0.5);
+}
+.text-glow-sky {
+  text-shadow: 0px 1px 14px #24ccf1;
 }
